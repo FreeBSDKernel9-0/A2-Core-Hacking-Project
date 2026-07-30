@@ -214,3 +214,10 @@ So unless I find a way to hold privileges, this exploit won't be that useful.
 
 Anyway, bye,
 FreeBSDKernel9-0.
+
+Oh, hey. So I'm getting a new thing when I go home, and it's Linux based. It's a 4G modem USB dongle thing, by ciciglow (never heard of it, LOL.)
+
+So yeah, apparently it runs Busybox ash, as it's shell, and the SoC is Qualcomm based. I'll drop the specs when I go home, so see you then.
+
+Short 'n' sweet,
+FreeBSDKernel9-0.
