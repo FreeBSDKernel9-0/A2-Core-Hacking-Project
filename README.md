@@ -221,3 +221,8 @@ So yeah, apparently it runs Busybox ash, as it's shell, and the SoC is Qualcomm 
 
 Short 'n' sweet,
 FreeBSDKernel9-0.
+
+So, update. It's been 5 days, it still hasn't arrived. I'm gonna giv up on it after 7, which sucks, because my Nana spent the cash I gave her to order it.
+I'm kinda pissed, LOL. But for now, might try to hack a Yoto Gen 3 (ESP32-S3, embedded Linux). I'll try that in, like, an hour, and update you.
+
+FreeBSDKernel9-0.
