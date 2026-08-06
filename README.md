@@ -226,3 +226,8 @@ So, update. It's been 5 days, it still hasn't arrived. I'm gonna giv up on it af
 I'm kinda pissed, LOL. But for now, might try to hack a Yoto Gen 3 (ESP32-S3, embedded Linux). I'll try that in, like, an hour, and update you.
 
 FreeBSDKernel9-0.
+
+So it's Day 7, I've given up on the package, if it comes, cool, but I don't care rn.
+Also, hacking that over WiFi was a dead end - Windows tools really suck, and BLE on light Linux is just junk. I will try, but probably won't get it. But, like, yeah, no cash. and no ciciglow. Thanks, Amazon and Elprico. You're crap.
+
+FreeBSDKernel9-0.
