@@ -231,3 +231,15 @@ So it's Day 7, I've given up on the package, if it comes, cool, but I don't care
 Also, hacking that over WiFi was a dead end - Windows tools really suck, and BLE on light Linux is just junk. I will try, but probably won't get it. But, like, yeah, no cash. and no ciciglow. Thanks, Amazon and Elprico. You're crap.
 
 FreeBSDKernel9-0.
+
+'Kay, new idea. It's like 2AM rn, and I just got an admin password backdoor into my router, and am gonna try Telnet into my router, LOL.
+It's, like, some Sky Hub thing, one of those flat ones, with the small green LEDs, and I'll drop the specs, since I'm auth as admin now.
+
+Broadcom BCM63168 SoC
+Backdoor: admin / sky
+Model: Upgraded ER115, crammed into a flatpack
+Linux Kernel: 3.4.11-rt19
+
+So yeah, since it's officially Day 8 of the ciciglow drama, I'm gonna see if they left Telnet on Port 23, and come back.
+
+FreeBSDKernel9-0.
