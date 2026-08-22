@@ -252,6 +252,37 @@ MacOS got hacked. (screensharingd RCE/Auth Bypass - CVE-2026-65400)
 
 I'm getting an older Kindle on Monday, to hack. (since, under the hood, Kindles are just a stripped Linux Kernel with Busybox)
 
-Found two new bugs.
+Found two new bugs. But one I forgot how to replicate, so I won't document it.
+
+FreeBSDKernel9-0.
+
+So, I gave up on the router, LOL, so that rules out those bugs.
+
+The bug is:
+
+## BriefBoot (Affected Device: Imaginear MP Touch)
+## Will try test more on the bug, and hopefully get a CVE off MITRE.
+
+CWE's:
+
+## CWE 400 (Active Debug Code)
+## CWE 798 (Use Of Default/Hardcoded Credentials)
+## CWE 16 (Security Misconfiguration)
+
+Causes:
+
+## DPC isn't set up properly, allowing access to the Reboot/Power menu, and the APK used isn't set as Device Owner, allowing a boot time race condition.
+
+The bug itself:
+
+## In the APK (tourBuilder), it's intended use at the Peterhead Prison Museum, is you go around, and type the codes on the different exhibits, to listen to info about them, in a provided set o headphones. So I quickly tried to exploit the approach, by typing random codes (I assumed there would be a backdoor code, and I was soon proven right), and I got one.
+
+## This is where CWE 798 and 400 come in. The code was 9999, and it led to a test menu. After playing around for a bit, I found my exploit, BriefBoot, which is a Kiosk Escape/Boot-time Race Condition vulnerability.
+
+Exploit steps:
+
+## Type 9999 > Sync > Download Latest Version > tourBuilder has stopped > Reboot > immediately spam the app drawer > with a fast hand, you can get into Settings, enable Developer Options, etc. The 'wake lock' script is active (kicking you back into the APK), hence the 'fast hand' thing.
+
+## I haven't tried that yet, but I'll ask for a retired device when I go back, and test more.
 
 FreeBSDKernel9-0.
