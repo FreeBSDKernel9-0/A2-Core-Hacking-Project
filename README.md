@@ -247,8 +247,11 @@ FreeBSDKernel9-0.
 Sorry I haven't updated in a bit. Here's my current info:
 
 Nana messaged Amazon and Elprico, hasn't heard back, probs'll just get a refund.
+
 MacOS got hacked. (screensharingd RCE/Auth Bypass - CVE-2026-65400)
+
 I'm getting an older Kindle on Monday, to hack. (since, under the hood, Kindles are just a stripped Linux Kernel with Busybox)
+
 Found two new bugs.
 
 FreeBSDKernel9-0.
