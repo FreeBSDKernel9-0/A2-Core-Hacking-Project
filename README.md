@@ -243,3 +243,12 @@ Linux Kernel: 3.4.11-rt19
 So yeah, since it's officially Day 8 of the ciciglow drama, I'm gonna see if they left Telnet on Port 23, and come back.
 
 FreeBSDKernel9-0.
+
+Sorry I haven't updated in a bit. Here's my current info:
+
+Nana messaged Amazon and Elprico, hasn't heard back, probs'll just get a refund.
+MacOS got hacked. (screensharingd RCE/Auth Bypass - CVE-2026-65400)
+I'm getting an older Kindle on Monday, to hack. (since, under the hood, Kindles are just a stripped Linux Kernel with Busybox)
+Found two new bugs.
+
+FreeBSDKernel9-0.
