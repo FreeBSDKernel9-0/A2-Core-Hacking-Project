@@ -285,4 +285,6 @@ Exploit steps:
 
 ## I haven't tried that yet, but I'll ask for a retired device when I go back, and test more.
 
+## Also, I will track this bug as 56737 (LOSER in single digit T9), due to the Loser, Baby TADC Remix, LMAO.
+
 FreeBSDKernel9-0.
