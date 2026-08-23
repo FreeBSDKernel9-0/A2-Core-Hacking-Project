@@ -13,5 +13,8 @@ sudo awk 'BEGIN {system("uname -a")}'
 # How to get the straight # prompt, without the background layout.
 sudo awk 'BEGIN {system("/bin/bash --noprofile --norc")}'
 
+# How to find the thing that causes this behaviour: www-data ALL=(ALL) NOPASSWD: /usr/bin/awk
+grep "www-data" /etc/sudoers
+
 # I'm not even calling this a bug, but it reminds me so much of OS Command Injection (CMi) on junk embedded stuff, that it's just too funny.
 # There is a real way to make this a bug, with crappy SUID settings, and also by allowing a web server (like /usr/bin/httpd) to run as (root), but this is the fun way.
