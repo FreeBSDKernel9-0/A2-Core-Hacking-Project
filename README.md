@@ -312,3 +312,16 @@ Impact: Using awk's system() function, you can spawn /bin/ash as (root), meaning
 I used Docker for my example, but any regular web server with www-data ALL=(ALL) NOPASSWD: /usr/bin/awk can have this bug.
 
 Later, FreeBSDKernel9-0.
+
+Another day, another LPE. This one is so dumb...
+
+Gentle Paws 
+
+Gentle Paws is a bug that stems from a crappy startup script written in 2015, for Google Cloud Shell. 
+Where do I start...? Oh, um, I got one. Using $USER to see if the script is running as (root)? Check. Using direct calls to /bin/bash -c, which is exactly what system() does? Check. Using a wildcard ($*) to pass whatever the first line you run to /bin/bash? Mmmhmm. Check.
+
+Look, I'm not dunking on Google, I'm just saying it's a chain of weird decisions, that led to idiots like me getting an LPE, before the terminal even fully loads.
+Also, letting UID 1000 symlink rsyslogd and other important services to /bin/true is a bad idea, considering... zero restrictins are in place to even stop that.
+Also, $USER is literally spoofable, and is exactly how CVE-2026-24061 works. I'm kinda tired of big corp rushing code, because it leads to me scoring two different LPE's in a day. But hey, free career, and a fun experience, so I'm not complining. (I'm just sayin'...)
+
+Later, FreeBSDKernel9-0.
