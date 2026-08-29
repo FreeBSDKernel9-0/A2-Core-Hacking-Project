@@ -322,6 +322,6 @@ Where do I start...? Oh, um, I got one. Using $USER to see if the script is runn
 
 Look, I'm not dunking on Google, I'm just saying it's a chain of weird decisions, that led to idiots like me getting an LPE, before the terminal even fully loads.
 Also, letting UID 1000 symlink rsyslogd and other important services to /bin/true is a bad idea, considering... zero restrictins are in place to even stop that.
-Also, $USER is literally spoofable, and is exactly how CVE-2026-24061 works. I'm kinda tired of big corp rushing code, because it leads to me scoring two different LPE's in a day. But hey, free career, and a fun experience, so I'm not complining. (I'm just sayin'...)
+Also, $USER is literally spoofable, and is exactly how CVE-2026-24061 works. I'm kinda tired of big corp rushing code, because it leads to me scoring two different LPE's in a day. But hey, free career, and a fun experience, so I'm not complining. (I'm just sayin'...)                                       
 
 Later, FreeBSDKernel9-0.
