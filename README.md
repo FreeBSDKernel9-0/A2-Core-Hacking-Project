@@ -271,3 +271,17 @@ Also, letting UID 1000 symlink rsyslogd and other important services to /bin/tru
 Also, $USER is literally spoofable, and is exactly how CVE-2026-24061 works. I'm kinda tired of big corp rushing code, because it leads to me scoring two different LPE's in a day. But hey, free career, and a fun experience, so I'm not complining. (I'm just sayin'...)                                       
 
 Later, FreeBSDKernel9-0.
+
+Bro... it's been a few days, and I dunno whether to laugh, or what. The bug we're talking about is Hash Paws (and HashPaws2 for Cloud). 
+Hash Paws and it's Cloud counterpart, HashPaws2, is a local privilege escalation vulnerability (obvs, most of my Linux stuff is LPE's, as of waiting for hardware), that stems from a just... stupid bug. Literally, the bug is abusing sed (running as sudo), to allow /etc/shadow's (root) password to get modified.
+
+Like, huh? You're not supposed to touch that shit as a normal user, but 'Oh, we need sudo!' Get out. Get. Out.
+
+Like, I'm not even gonna..
+
+CWE 276 (incorrect Default Permission) because... sudo ALL, LOL.
+CWE 269 (Improper Privilege Management) because... sudo on UID 1000? LOLFAO.
+CWE 732 (Incorrect Permission Assignment for Critical Resource) /etc/shadow itself has safe permissions, but running sed as (root) to edit it scraps that quick.
+
+LMAO, weird AF.
+FreeBSDKernel9-0.
