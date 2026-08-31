@@ -1,5 +1,7 @@
-# HashPaws2
+# HashPaws2 (Google Cloud Shell)
 # Getting (root) by modifying /etc/shadow - Local Privilege Escalation 
+
+# LOL, whois comes by default when you spawn a box on Cloud, so you don't need that line.
 
 mkpasswd -m yescrypt "password123" # Boring example, but I used that.
 
