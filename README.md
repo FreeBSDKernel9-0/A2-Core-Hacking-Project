@@ -285,3 +285,15 @@ CWE 732 (Incorrect Permission Assignment for Critical Resource) /etc/shadow itse
 
 LMAO, weird AF.
 FreeBSDKernel9-0.
+
+'Kay, new bug. rCat (direct nod to rBash, fitted to my 'Paws' theme) is a local privilege escalation bug in a web server (people, who want speed combined with a server that uses /usr/bin/login, would do this) caused by rshd not stripping/sanitizing input before passing to /usr/bin/login, leading to /usr/bin/login's command looking like this: /usr/bin/login login -f root. (Invokes the login binary, passes it login - for some weird reason - and passes that -f (skip auth) root.)
+
+So, obviously, that's bad. Really bad. It means, even if you set a password for (root), it'll just bypass it, assuming you're pre-auth somewhere else.
+Classic Argument/Flag Injection, and directly mirrors CVE-2026-24061, along with a pile of other CVE's from 2001 to 2015.
+
+The dumb thing is, people who want a server (school admins setting up a server for a class) or people setting up a 'package downloader' server, would actually do something like this. If they want logins, but also speed, they'd probably forget to sanitize input. 
+
+Also, getting an RCE exploit on Cloud and getting (root) on this server would immediately mean you go from (root) on the server, to getting in the host machine.
+
+Bad idea,
+FreeBSDKernel9-0.
