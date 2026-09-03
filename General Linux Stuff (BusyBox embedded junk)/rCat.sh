@@ -19,5 +19,9 @@ exec /usr/bin/login $INPUT_ARGS
 EOF
 chmod +x /usr/local/bin/in.rshd
 
-docker exec -u root local_target sh -c 'echo "www-data ALL=(root) NOPASSWD: /usr/local/bin/in.rshd" >> /etc/sudoers'
+# Create the rule, to run the in.rshd daemon as (root)
+echo "www-data ALL=(root) NOPASSWD: /usr/local/bin/in.rshd" | docker exec -i local_target sh -c 'cat >> /etc/sudoers'
+
+
+
 
