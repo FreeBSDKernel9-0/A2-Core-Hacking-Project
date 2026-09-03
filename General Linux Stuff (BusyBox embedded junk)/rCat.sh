@@ -13,11 +13,11 @@ docker exec -u root local_target sed -i '/pam_securetty.so/d' /etc/pam.d/login
 docker exec -u root local_target sh -c 'echo "export PS1=\"root@apache: # \"" >> /root/.bashrc'
 
 # Close the file, put shell args (don't do that in real stuff)
-docker exec -u root local_target sh -c 'cat << "EOF" ' > /usr/local/bin/in.rshd
+docker exec -i local_target sh -c 'cat << "EOF" > /usr/local/bin/in.rshd
 INPUT_ARGS=$1
 exec /usr/bin/login $INPUT_ARGS
-EOF
-chmod +x /usr/local/bin/in.rshd
+EOF'
+docker exec -u root local_target chmod +x /usr/local/bin/in.rshd
 
 # Add the sudoers rule, to run in.rshd as (root)
 echo "www-data ALL=(root) NOPASSWD: /usr/local/bin/in.rshd" | docker exec -i local_target sh -c 'cat >> /etc/sudoers'
